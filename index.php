@@ -1,12 +1,64 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
-        // put your code here
-        ?>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Development Team Random Chooser</title>
+		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+		<script type="text/javascript"> google.load("jquery", "1.3.2"); </script>
+		<script src="jqtouch/jqtouch.min.js" type="application/x-javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		var jQT = $.jQTouch({
+			icon: 'jqtouch.png',
+			statusBar: 'black-translucent',
+			preloadImages: [
+				'themes/jqt/img/chevron_white.png',
+				'themes/jqt/img/bg_row_select.gif',
+				'themes/jqt/img/back_button_clicked.png',
+				'themes/jqt/img/button_clicked.png'
+				]
+		});
+		$(function(){
+			$('#team').submit(function(){
+				jQT.goBack();
+				//$('input').blur();
+				//$('#settings .cancel').click();
+				//this.reset();
+				return false;
+			});
+		});
+		</script>
+
+		<style type="text/css" media="screen">@import "jqtouch/jqtouch.min.css";</style>
+		<style type="text/css" media="screen">@import "themes/jqt/theme.min.css";</style>
+		<link rel="stylesheet" href="css/main.css" type="text/css" />
+
+	</head>
+
+	<body>
+		<div id="home">
+			<div class="toolbar">
+				<h1>Chooser</h1>
+				<a href="#settings" class="button leftButton flip">Settings</a>
+			</div>
+		</div>
+		<div id="settings">
+			<div class="toolbar">
+				<h1>Settings</h1>
+				<a href="#add" class="cancel">Cancel</a>
+			</div>
+			<form id="team">
+				<ul class="edit rounded">
+					<li><input type="checkbox" name="member[]" value="amace" title="Alex Mace" /></li>
+					<li><input type="checkbox" name="member[]" value="jastley" title="Jon Astley" /></li>
+					<li><input type="checkbox" name="member[]" value="lrowley" title="Les Rowley" /></li>
+					<li><input type="checkbox" name="member[]" value="marcusjhdon" title="Marcus Don" /></li>
+					<li><input type="checkbox" name="member[]" value="rdeeson" title="Rich Deeson" /></li>
+					<li><input type="checkbox" name="member[]" value="rgrundy" title="Rich Grundy" /></li>
+					<li><input type="checkbox" name="member[]" value="rgrundy" title="Rob Goldsmith" /></li>
+					<li><input type="checkbox" name="member[]" value="tcurzon" title="Tim Curzon" /></li>
+				</ul>
+				<a href="#" style="margin: 10px;" class="whiteButton submit">Save</a>
+			</form>
+		</div>
+	</body>
 </html>
