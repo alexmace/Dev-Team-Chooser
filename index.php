@@ -19,10 +19,14 @@
 		});
 		$(function(){
 			$('#team').submit(function(){
-				jQT.goBack();
+				$('#home img').css('display', 'none');
+				$('#settings input[type=checkbox]:checked').each(function(){
+					$('#' + this.value).css('display','block');
+				});
 				//$('input').blur();
 				//$('#settings .cancel').click();
 				//this.reset();
+				jQT.goBack();
 				return false;
 			});
 		});
@@ -40,6 +44,20 @@
 				<h1>Chooser</h1>
 				<a href="#settings" class="button leftButton flip">Settings</a>
 			</div>
+			<img id="amace" src="images/amace.jpg" alt="Alex Mace"
+				 title="Alex Mace" /><img id="jastley" src="images/jastley.jpg"
+				 alt="Jon Astley" title="Jon Astley" /><img id="lrowley"
+				 src="images/lrowley.jpg" alt="Les Rowley"
+				 title="Les Rowley" /><img id="marcusjhdon" 
+				 src="images/marcusjhdon.jpg" alt="Marcus Don"
+				 title="Marcus Don" /><img id="rdeeson"
+				 src="images/rdeeson.jpg" alt="Rich Deeson"
+				 title="Rich Deeson" /><img id="rgrundy" src="images/rgrundy.jpg"
+				 alt="Rich Grundy" title="Rich Grundy" /><img id="rgoldsmith"
+				 src="images/rgoldsmith.jpg" alt="Rob Goldsmith"
+				 title="Rob Goldsmith" /><img id="tcurzon" 
+				 src="images/tcurzon.jpg" alt="Tim Curzon"
+				 title="Tim Curzon" />
 		</div>
 		<div id="settings">
 			<div class="toolbar">
