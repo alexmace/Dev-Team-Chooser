@@ -19,15 +19,24 @@
 		});
 		$(function(){
 			$('#team').submit(function(){
-				$('#home img').css('display', 'none');
+				$('#home img').removeClass('present');
 				$('#settings input[type=checkbox]:checked').each(function(){
-					$('#' + this.value).css('display','block');
+					$('#' + this.value).addClass('present');
 				});
-				//$('input').blur();
-				//$('#settings .cancel').click();
-				//this.reset();
 				jQT.goBack();
 				return false;
+			});
+
+			$('#home .rightButton').click(function() {
+				$('#home').append('<div id="mask"><div id="choosing"><img src="images/ajax-loader.gif" alt="Loader" /><br />Choosing...</div></div>');
+				$('#mask').css({
+					'background-color': '#000000',
+					'opacity': 0
+				});
+				$('#mask').animate({'opacity': 0.8},'fast','swing',function(){
+					// Choose someone randomly, fade all the other pictures
+					// out.
+				});
 			});
 		});
 		</script>
@@ -43,6 +52,7 @@
 			<div class="toolbar">
 				<h1>Chooser</h1>
 				<a href="#settings" class="button leftButton flip">Settings</a>
+				<a href="#" class="button rightButton">Pick</a>
 			</div>
 			<img id="amace" src="images/amace.jpg" alt="Alex Mace"
 				 title="Alex Mace" /><img id="jastley" src="images/jastley.jpg"

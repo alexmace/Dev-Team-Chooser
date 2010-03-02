@@ -10,7 +10,62 @@
    TODO customize this sample style
    Syntax recommendation http://www.w3.org/TR/REC-CSS2/
 */
+#home,
+#settings,
 #home img {
 	width: 320px;
+}
+
+.landscape #home,
+.landscape #settings,
+.landscape #home img {
+	width: 480px;
+}
+
+#home {
+	position: relative;
+}
+
+#home img {
+	display: none;
+}
+
+#home .present {
+	display: block;
+}
+
+#home #mask {
+	background-color: transparent;
+	height: 435px;
+	left: 0px;
+	position: absolute;
+	top: 45px;
+	width: 320px;
+}
+
+.landscape #home #mask {
+	height: 275px;
+	width: 480px;
+}
+
+#home #mask img {
+	display: block;
+	margin: 0px 0px 5px;
+	width: auto;
+}
+
+#choosing {
+	background-color: #EEEEEE;
+	color: #000000;
+	height: 50px;
+	margin: 142px auto 0px;
+	padding: 30px 10px;
+	text-align: center;
+	width: 90px;
+	-webkit-border-radius: 5px;
+}
+
+.landscape #choosing {
+	margin: 62px auto 0px;
 }
 
